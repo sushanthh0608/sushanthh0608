@@ -66,7 +66,7 @@ Several exceptions might occur during the API operations,
 
 ### API Endpoint details
 
-Registration and Connection Management (RACM)
+** Registration and Connection Management (RACM) **
 
 | Endpoint | Operation | Description |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ Registration and Connection Management (RACM)
 | PUT /session/{sessionId} | Modify a RACM session | This modification request is to share refreshed Access Token received from CSP's IDP (auth server). |
 | DELETE /session/{sessionId} | Delete a RACM session | When the customer-user gracefully logs out of the application, the RACM session will be deleted, resulting in de-registration from the CSP's IMS network. |
 
-Notification Channel Management
+** Notification Channel Management **
 
 | Endpoint | Operation | Description |
 | --- | --- | --- |
@@ -83,18 +83,16 @@ Notification Channel Management
 - Any other notifications from the network such as call setup status, call modification status, etc.
  |
 
-OneToOne Call (outgoing)
+** OneToOne Call (outgoing) **
 
 | Endpoint | Operation | Description |
 | --- | --- | --- |
 | POST /session | Create a Voice session | Create an Outbound (1-1) Voice session. This request when received at the WebRTC GW triggers an outgoing call request into the CSP's IMS network. The call setup status (inprogress, ringing, connected, release) is sent over the websocket notification channel. |
 | PUT /session/{sessionId}/status | Modify a Voice session | This modification request is to modify the call object attributes such as media properties included in the SDP (e.g. call placed on hold). |
 | DELETE /session/{sessionId} | Delete a Voice session | When the call is released from the client's end, the corresponding Voice session object is deleted, which will trigger the WebRTC GW to initiate a Call release into the CSP's IMS network. |
-|
- |
- | When the call is released from the network's end, the call release notification is sent over the websocket notification channel, which will result in deleting of the Voice session object. |
+| | | When the call is released from the network's end, the call release notification is sent over the websocket notification channel, which will result in deleting of the Voice session object. |
 
-OneToOne Call (incoming)
+** OneToOne Call (incoming) **
 
 | Endpoint | Operation | Description |
 | --- | --- | --- |
