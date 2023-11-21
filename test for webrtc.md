@@ -66,7 +66,7 @@ Several exceptions might occur during the API operations,
 
 ### API Endpoint details
 
-** Registration and Connection Management (RACM) **
+**Registration and Connection Management (RACM)**
 
 | Endpoint | Operation | Description |
 | --- | --- | --- |
